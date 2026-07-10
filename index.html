@@ -9,22 +9,44 @@ type="module"
 src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js">
 </script>
 
+
 <style>
 
 body{
     margin:0;
     font-family:Arial;
+    background:#f5f5f5;
 }
 
 
 .card{
     padding:20px;
+    background:white;
+    border-radius:20px;
+    margin:20px;
 }
 
 
 model-viewer{
+
     width:100%;
     height:500px;
+
+}
+
+
+button{
+
+    background:#111;
+    color:white;
+
+    border:none;
+    border-radius:30px;
+
+    padding:15px 30px;
+
+    font-size:18px;
+
 }
 
 </style>
@@ -33,37 +55,56 @@ model-viewer{
 </head>
 
 
+
 <body>
 
 
 <div class="card">
+
 
 <h1>🍰 Chocolate Cake</h1>
 
 <h2>₹199</h2>
 
 
+
 <model-viewer
+
 
 src="./output/cake_table_ready_v2.glb"
 
+
 camera-controls
+
+
+touch-action="pan-y"
+
 
 ar
 
+
 ar-modes="webxr scene-viewer quick-look"
+
 
 camera-orbit="0deg 65deg 1m"
 
-min-camera-orbit="-Infinity 65deg auto"
 
-max-camera-orbit="Infinity 65deg auto"
+min-camera-orbit="auto auto auto"
 
-interaction-prompt="auto"
+
+max-camera-orbit="auto auto auto"
+
 
 shadow-intensity="1"
 
+
+shadow-softness="1"
+
+
 environment-image="neutral"
+
+
+exposure="1"
 
 
 >
@@ -77,6 +118,7 @@ View On Table
 
 
 </model-viewer>
+
 
 
 </div>
